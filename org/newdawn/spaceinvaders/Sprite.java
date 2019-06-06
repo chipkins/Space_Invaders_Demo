@@ -3,7 +3,6 @@ package org.newdawn.spaceinvaders;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.image.BufferedImage;
 
 /**
  * A sprite to be displayed on the screen. Note that a sprite
@@ -17,7 +16,6 @@ import java.awt.image.BufferedImage;
 public class Sprite {
 	/** The image to be drawn for this sprite */
 	private Image image;
-	private boolean flipped = false;
 	
 	/**
 	 * Create a new sprite based on an image
@@ -26,17 +24,6 @@ public class Sprite {
 	 */
 	public Sprite(Image image) {
 		this.image = image;
-	}
-
-	/**
-	 * Create a new sprite based on an image
-	 * 
-	 * @param image The image that is this sprite
-	 * @param flipped If the image should be flipped vertically
-	 */
-	public Sprite(Image image, boolean flipped) {
-		this.image = image;
-		this.flipped = flipped;
 	}
 	
 	/**
@@ -55,13 +42,6 @@ public class Sprite {
 	 */
 	public int getHeight() {
 		return image.getHeight(null);
-	}
-
-	/**
-	 * Set an image to be drawn flipped vertically
-	 */
-	public void flipSpriteVertically() {
-		flipped = !flipped;
 	}
 	
 	/**

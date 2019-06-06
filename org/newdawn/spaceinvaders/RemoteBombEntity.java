@@ -72,7 +72,7 @@ public class RemoteBombEntity extends ShotEntity {
 	 * Notification that this shot has collided with another
 	 * entity
 	 * 
-	 * @parma other The other entity with which we've collided
+	 * @param other The other entity with which we've collided
 	 */
 	public void collidedWith(Entity other) {
 		// If the shot hasn't exploded, don't register collision

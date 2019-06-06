@@ -35,6 +35,8 @@ public class WeaponSystem {
 
 	/**
 	 * Fires a single shot forward from the designated Entity
+	 * 
+	 * @return if a shot was successfully spawned
 	 */
 	public boolean firePrimaryWeapon() {
 		if (System.currentTimeMillis() - lastFire < primaryFiringInterval) {
@@ -51,6 +53,8 @@ public class WeaponSystem {
 
 	/**
 	 * Fires 3 shots in a split "W" pattern
+	 * 
+	 * @return if the shots were successfully spawned
 	 */
 	public boolean fireSpitShot() {
 		if (System.currentTimeMillis() - lastFire < splitShotFiringInterval) {
@@ -76,6 +80,8 @@ public class WeaponSystem {
 
 	/**
 	 * Fire a piercing shot that can hit up to 2 enemies
+	 * 
+	 * @return if a shot was successfully spawned
 	 */
 	public boolean firePiercingShot() {
 		if (System.currentTimeMillis() - lastFire < piercingShotFiringInterval) {
@@ -92,6 +98,8 @@ public class WeaponSystem {
 
 	/**
 	 * Fire a shot that can be remotely detonated after being fired
+	 * 
+	 * @return if a shot was successfully spawned
 	 */
 	public boolean fireRemoteBomb() {
 		if (System.currentTimeMillis() - lastFire < remoteBombFiringInterval) {

@@ -94,7 +94,11 @@ public class ShipEntity extends Entity {
 	}
 
 	/**
-	 * Try to fire from the weapon system
+	 * Try to fire from the weapon system depending on the current key pressed
+	 * 
+	 * @param keyCode the value of the key being pressed
+	 * 
+	 * @return whether a shot has successfully been fired
 	 */
 	public boolean tryToFire(int keyCode) {
 		// if we waited long enough, create the shot entity, and record the time.

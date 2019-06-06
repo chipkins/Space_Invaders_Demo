@@ -3,9 +3,9 @@ package org.newdawn.spaceinvaders;
 import java.util.Random;
 
 /**
- * An entity which represents one of our space invader aliens.
+ * An entity which represents a harder version of the aliens.
  * 
- * @author Kevin Glass
+ * @author Chris Hipkins
  */
 public class EliteAlienEntity extends AlienEntity {
 	/** Alien's current health value */
@@ -31,14 +31,25 @@ public class EliteAlienEntity extends AlienEntity {
 		firingInterval = (long)(rand.nextInt(2000) + 1000);
 	}
 
+	/**
+	 * Retrieve the Aliens current health
+	 * 
+	 * @return the current health value
+	 */
 	public int getHealth() {
 		return health;
 	}
 
+	/**
+	 * Notify the entity to take damage
+	 */
 	public void takeDamage() {
 		health--;
 	}
 
+	/**
+	 * Attempt to spawn a ShotEntity if an appropriate amount of time has passed
+	 */
 	public void tryToFire() {
 		if (System.currentTimeMillis() - lastFire < firingInterval) {
 			return;

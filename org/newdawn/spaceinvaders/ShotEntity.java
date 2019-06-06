@@ -43,8 +43,6 @@ public class ShotEntity extends Entity {
 			dx = playerMoveSpeed * Math.sin(angleRadians);
 			dy = playerMoveSpeed * Math.cos(angleRadians);
 		} else {
-			// Since the alien is firing this shot, flip it so it faces the correct direction
-			this.sprite.flipSpriteVertically();
 			dx = alienMoveSpeed * Math.sin(angleRadians);
 			dy = alienMoveSpeed * Math.cos(angleRadians);
 		}
@@ -72,7 +70,7 @@ public class ShotEntity extends Entity {
 	 * Notification that this shot has collided with another
 	 * entity
 	 * 
-	 * @parma other The other entity with which we've collided
+	 * @param other The other entity with which we've collided
 	 */
 	public void collidedWith(Entity other) {
 		// prevents double kills, if we've already hit something,
